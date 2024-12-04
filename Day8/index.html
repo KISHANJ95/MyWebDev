@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+    }
+</style>
+<body>
+    <h1>Hello this is <span id="username">Kishan</span></h1>
+    <div class="box"></div>
+    <!-- <button onclick="ChangeName()">Change The Name</button> -->
+    <button onclick="ChangeBox()">Change Box Color</button>
+
+    <script>
+        // const ChangeName=()=>{
+        //     const name = window.prompt("Enter Your name")
+        //     const NamePlace=document.getElementById("username").innerHTML=name      
+        // }
+        let gray=false
+        const ChangeBox=()=>{
+            const box = document.getElementsByClassName("box")[0]
+            if (gray===true){
+                box.style.backgroundColor="gray"
+                gray=false
+            }
+            else{
+                box.style.backgroundColor="yellow"
+                gray=true
+            }
+        }
+    </script>
+</body>
+</html>
