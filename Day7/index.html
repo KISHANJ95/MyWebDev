@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>This is JS</h1>
+
+    <script>
+        let kj = [1,2,3,"abc",8]
+        console.log(kj)
+        kj.push("John")
+        console.log(kj)
+
+        console.log("Hello World")
+        //array
+        const fruits=["apple","banana","chiku","dragon fruit","melons","papaya","mango"]
+        console.log(fruits)
+        fruits.push("orange")
+        console.log(fruits)
+        fruits.pop()
+        console.log(fruits)
+
+        fruits.unshift("banana")
+        console.log(fruits)
+        fruits.shift()
+        console.log(fruits)
+
+        const ReversedFruits=fruits.reverse()
+        console.log(ReversedFruits)
+
+        //sorted
+        const ages=[19,43,55,87,98,12,11,9,65,44]
+        console.log("This is sorted ages(ascending)",ages.sort((a,b)=>a-b))
+        console.log("This is sorted ages(descending)",ages.sort((a,b)=>b-a))
+        
+        const SortedFruits=fruits.sort()
+        console.log(SortedFruits)
+        const DescendFruits=fruits.reverse()
+        console.log(DescendFruits)
+
+        for(let i=0;i<fruits.length;i++){
+            console.log(`I like ${fruits[i]} to eat`)
+        }
+
+        //for in
+        console.log("Printing fruits using for in loop")
+        for(let x in fruits){
+            console.log(fruits[x])
+        }
+
+        //map
+        console.log("Printing fruits using map")
+        const NewFruits=fruits.map((item)=>{
+            console.log(item)
+        })
+
+        //for each
+        console.log("Printing fruits using for each")
+        fruits.forEach((item)=>{
+            console.log(item)
+        })
+
+        const age=[14,23,54,107,33,67,12,11,9,44]
+        const voters=age.filter((age)=>age>17)
+        console.log(voters)
+
+        const SlicedFruits=fruits.slice(2,5)
+        console.log("This is sliced fruits",SlicedFruits)
+        const SplicedData=fruits.splice(2,2,"orange","pineapple")
+        console.log("This is spliced data",fruits)
+        const CheckedFruits=fruits.includes("melons")
+        console.log(CheckedFruits)
+        console.log(fruits.at(-4))
+
+        const student={
+            name:"Rahul",
+            age:19,
+            class:"XII",
+            rollno:12,
+            address:{
+                state:"Nagaland",
+                city:"Kohima",
+                pincode:87211,
+                landmark:"Mountain"
+            }
+        }
+        console.log(student.address.state)
+
+        const restaurant={
+            name:"Sarovar",
+            tag:"We Serve Taste",
+            since:1992,
+            location:"Near Kashmiri Gate,Delhi",
+            menu:{
+                Veg:{
+                    item1:"Aloo Gobhi",
+                    item2:"Matar Paneer",
+                    item3:"Dal Makhani"
+                },
+                NonVeg:{
+                    item1:"Chicken Tikka Masala",
+                    item2:"Chicken Biryani",
+                    item3:"Chicken Tandoori"
+                }
+            }
+        }
+        console.log(restaurant)
+
+        let cars=["Audi","Mercedes","Tata","Range Rover"]
+        let bikes=["Pulsar","R15","Bullet","Kawasaki"]
+
+        let vehicles=[...cars,...bikes]
+        console.log(vehicles)
+
+        //rest operator
+        const AddTheNumbers=(...rest)=>{
+            const size=rest.length
+            let sum=0;
+            for(let i=0;i<size;i++){
+                sum+=rest[i];
+                //sum=sum+rest[i]
+            }
+        console.log(sum)
+        }
+        AddTheNumbers(4,5,545,4545,454,4,554,212)
+    </script>
+</body>
+</html>
