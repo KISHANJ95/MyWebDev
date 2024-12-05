@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <form action="">
+            <h1>This is your form</h1>
+            <label for="username">Username</label>
+            <input type="text" value="" id="username"><br><br>
+
+            <label for="password">Password</label>
+            <input type="password" name="" id="password"><br><br>
+
+            <label for="cnfpassword">Confirm Password</label>
+            <input type="password" name="" id="cnfpassword"><br><br>
+            <button onclick="handleSubmit()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const handleSubmit=()=>{
+            const username=document.getElementById('username').value;
+            const password=document.getElementById('password').value;
+            const cnfpassword=document.getElementById('cnfpassword').value;
+
+            if(username == "" || password =="" || cnfpassword ==""){
+                window.alert("Please enter the required fields")
+                return
+            }
+
+            if(password.length<8){
+                window.alert("Please create a strong password")
+                return
+            }
+
+            if(password!=cnfpassword){
+                window.alert("Passwords do not match")
+                return
+            }
+
+            else(
+                window.alert("Registration successful")
+            )
+        }
+
+        function helloWorld(){
+            console.log("Hello World, this is normal function");
+        }
+
+        const helloWorld2=()=>{
+            console.log("Hello World, this is arrow function");
+        }
+    </script>
+</body>
+</html>
